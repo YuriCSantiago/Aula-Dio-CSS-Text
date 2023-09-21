@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-Space</title>
+    <style>
+        .exemplo {
+            width: 200px;
+            background-color: chartreuse;
+        }
+
+        span {
+            background-color: seagreen;
+            color: white;
+        }
+
+        #nowrap {
+            white-space: nowrap; /*Conteudo do texto se mantem em uma só linha*/
+        }
+
+        #pre {
+            white-space: pre;/*Espaços em branco colocado no texto se mantem*/
+            /*Do jeito que o texto for digitado no html, fica.*/
+        }
+
+        #pre-line {
+            white-space: pre-line;
+            /*Tem quebra de linha quando tamanho do width é atingido e quando quebra a linha no HTML*/
+        }
+
+        #pre-wrap {
+            white-space: pre-warp;
+            /*Espaços em branco sao preservados como colocou no html e o texto vai ser quebrado quando necessario
+            e de acordo com o HTML*/
+        }
+
+        #break-spaces {
+            white-space: break-spaces;
+            /*Os espaços do html vao continuar mas respeitando o tamanho do elemento */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Propriedade <code>white-space</code></h2>
+    <p>Define como os espaços em branco do texto de um determinado elemento é tratado</p>
+
+    <i>Exemplos:</i> <br><br>
+
+    <code>white-space: normal</code>
+    <p class="exemplo">
+        <span>
+            Lorem                ipsum dolor sit amet consectetur adipisicing elit. Assumenda soluta est nemo! Nihil aliquam, eligendi
+            nisi et in, quis quas o             mnis natus praesentium
+             fugit accusamus quasi, animi eius dicta                cupiditate?
+        </span>
+    </p>
+
+    <code>white-space: nowrap</code>
+    <p id="nowrap" class="exemplo">
+        <span>
+            Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Assumenda soluta est nemo! Nihil 
+            aliquam, eligendi
+            nisi et in, quis quas omnis natus
+             praesentium fugit accusamus quasi, animi eius dicta 
+             cupiditate?
+            </span>
+            
+            <p id="pre" class="exemplo">
+                <code>white-space: pre</code>
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Assumenda soluta est nemo! Nihil aliquam, eligendi
+            nisi et in, quis quas omnis natus praesentium fugi
+            t accusamus quasi, animi eius dicta cupiditate?
+        </span>
+
+        <p id="pre-line" class="exemplo">
+        <code>white-space: pre-line</code>
+        <span>
+            Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Assumenda soluta est nemo! Nihil aliquam, eligendi
+            nisi et in, quis quas omnis natus praesentium 
+            fugit accusamus quasi, animi eius dic
+            ta cupiditate?
+        </span>
+
+        <p id="pre-wrap" class="exemplo">
+        <code>white-space: pre-wrap</code> <br> <br>
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda soluta est nemo! Nihil aliquam, eligendi
+            nisi et in, quis quas omnis natus praesentium fugit accusamus quasi, animi eius dicta cupiditate?
+        </span>
+
+        <p id="break-spaces" class="exemplo">
+        <code>white-space: break-spaces</code> <br><br>
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda soluta est nemo! Nihil aliquam, eligendi
+            nisi et in, quis quas omnis natus praesentium fugit accusamus quasi, animi eius dicta cupiditate?
+        </span>
+</body>
+
+</html>
